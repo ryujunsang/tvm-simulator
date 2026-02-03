@@ -903,7 +903,7 @@
             const sensor = document.getElementById(sensorId);
             sensor.classList.add('active');
             
-            const sensorType = sensorId.replace('sensor', '');
+            const sensorType = sensorId.replace(/sensor/, '').replace(/^(SF|SC)[0-9]+$/, '$1');
             const led = document.getElementById('led' + sensorType);
             const row = document.getElementById('sensorRow' + sensorType);
             
